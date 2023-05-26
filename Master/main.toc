@@ -1,0 +1,18 @@
+\ttl@change@i {\@ne }{chapter}{0em}{\bfseries \hei \xiaosi \vspace {0.5\baselineskip }\noindent }{\thecontentslabel ~~}{}{\titlerule *[4pt]{.}\contentspage \vspace {0.5\baselineskip }}\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{38pt}{\xiaosi }{\contentslabel {20pt}}{\hspace *{-20pt}}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{70pt}{\xiaosi }{\contentslabel {32pt}}{\hspace *{-32pt}}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \vspace {-1.2\baselineskip }\noindent 图清单}{I}{section*.4}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \vspace {-1.2\baselineskip }\noindent 表清单}{II}{section*.6}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \vspace {-0.5\baselineskip }\noindent 变量注释表}{III}{section*.8}%
+\contentsline {chapter}{\numberline {1\hspace {.3em}}图表公式排版}{1}{section*.10}%
+\contentsline {section}{\numberline {1.1}图}{1}{section*.12}%
+\contentsline {subsection}{\numberline {1.1.1}单幅图}{1}{section*.14}%
+\contentsline {section}{\numberline {1.2}表}{2}{section*.18}%
+\contentsline {section}{\numberline {1.3}公式}{2}{section*.22}%
+\contentsline {subsection}{\numberline {1.3.1}单个公式}{2}{section*.24}%
+\contentsline {chapter}{\numberline {2\hspace {.3em}}参考文献格式}{4}{section*.25}%
+\contentsline {section}{\numberline {2.1}格式}{4}{section*.27}%
+\contentsfinish 

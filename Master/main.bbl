@@ -1,0 +1,14 @@
+
+\begin{thebibliography}{0}
+\thispagestyle{empty}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI: #1}\else
+  \providecommand{\doi}{DOI: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem{1}  王玉本,王伟伟,纪德华等.坛紫菜北方海区养殖试验[J].水产科技情报,2023,50(02):87-92.
+\bibitem{2} 龚其龙,徐啸涛.连云港市连云区紫菜产业发展现状及SWOT分析[J].中国食品工业,2022, 345(07):54-58.
+\bibitem{3} Jiang Z, Ma Y. Accurate extraction of offshore raft aquaculture areas based on a 3D-CNN model[J]. International Journal of Remote Sensing, 2020, 41(14): 5457-5481.
+
+\end{thebibliography}
