@@ -1,0 +1,93 @@
+% !Mode:: "TeX:UTF-8" 
+
+%====================================== 图清单 ==========================================
+\pagestyle{plain}
+\newpage
+
+\begin{center}\setcounter{page}{1}\pagenumbering{Roman}\end{center}
+\begin{center}{\hei\fontsize{18pt}{18pt}\selectfont 图清单}\end{center}   %黑体小2居中，单倍行距，段前0.5行，段后0.5行\setlength{\parskip}{0.5\baselineskip}
+\addcontentsline{toc}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-1.2\baselineskip}\noindent 图清单}
+\addcontentsline{toe}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-0.4\baselineskip}\noindent List of Figures}
+ %黑体小4号，单倍行距,段前断后0
+
+ %\end{raggedright} 
+{\fontsize{10.5pt}{10.5pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{1}
+\centering
+\begin{longtable}{|C{0.15\textwidth}|C{0.618\textwidth}|C{0.15\textwidth}|}
+\hline
+图序号 & 图名称 & 页码 \\
+\hline
+图1.1      & GF-1遥感影像中的筏式紫菜养殖区                                                                                         & 4  \\ \hline
+Fig. 1.1  & Raft laver aquaculture   area in GF-1 remote sensing image                                                & 4  \\ \hline
+图2.1      & U-Net卷积网络模型示意图                                                                                            & 6  \\ \hline
+Fig.2.1   & The schematic diagram of U-Net convolutional network   model                                              & 6  \\ \hline
+图2.2      & DeepLabv3+结构示意图                                                                                           & 7  \\ \hline
+
+Fig.4.14  & Heatmaps of   the aquaculture area of the BGM module                                                      & 41 \\ \hline
+图4.15     & 不同的超参数取值对模型性能的影响                                                                                          & 42 \\ \hline
+Fig.4.15  & Effect of   different hyperparameter values on model performance                                          & 42 \\ \hline
+图4.16     & RADNet在测试图像1上的筏式紫菜养殖区提取结果                                                                                 & 42 \\ \hline
+Fig. 4.16 & Extraction   results of raft laver aquaculture area on test image 1 by RADNet                             & 42 \\ \hline
+图4.17     & RADNet在测试图像2上的筏式紫菜养殖区提取结果                                                                                 & 43 \\ \hline
+Fig. 4.17 & Extraction   results of raft laver aquaculture area on test image 2 by RADNet                             & 43 \\ \hline
+\end{longtable}
+%\caption{一个占满页宽的表格}
+}% 中文宋体5号；英文：Times New Roman 5号字 
+
+
+%====================================== 表清单 ==========================================
+
+\newpage
+\begin{center}{\hei\fontsize{18pt}{18pt}\selectfont\setlength{\parskip}{0.5\baselineskip} {表清单}}\end{center}
+\addcontentsline{toc}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-1.2\baselineskip}\noindent 表清单}
+\addcontentsline{toe}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-0.4\baselineskip}\noindent List of Tables}
+%黑体小4号，单倍行距,段前断后0
+%\BiAppendixChapter{表清单}{List of Tables}
+%\begin{center}{\bfseries\xiaoer\hei {表清单}}\end{center}
+
+{\fontsize{10.5pt}{16pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{0.8}
+\centering
+\begin{longtable}{|C{0.15\textwidth}|C{0.618\textwidth}|C{0.15\textwidth}|}
+\hline
+表序号 & 表名称 & 页码 \\
+\hline
+表3.1      & 实验的训练集、验证集和测试集                                                                      & 19 \\ \hline
+Table 3.1 & Training, validation and test set of the   experiments                              & 19 \\ \hline
+
+表4.5      & RADNet在Sentinel-2影像上的定量比较结果                                                         & 43 \\ \hline
+Table 4.5 & Quantitative comparison results of RADNet on   Sentinel-2 images                    & 43 \\ \hline
+\end{longtable}
+%\caption{一个占满页宽的表格}
+}% 中文宋体5号；英文：Times New Roman 5号字 
+
+
+%======================================变量注释 ==========================================
+\newpage
+\begin{center}{\hei\fontsize{18pt}{18pt}\selectfont\setlength{\parskip}{0.5\baselineskip} {变量注释表}}\end{center}
+\addcontentsline{toc}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-0.5\baselineskip}\noindent 变量注释表}
+\addcontentsline{toe}{chapter}{\protect\fontsize{12pt}{12pt}\selectfont\vspace{-0.1\baselineskip}\noindent List of Variables}
+
+{\fontsize{10.5pt}{16pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\renewcommand{\arraystretch}{0.8}
+\begin{longtable}{C{0.15\textwidth}C{0.618\textwidth}C{0.15\textwidth}}
+\textbf{变量} & \textbf{注释} & \textbf{初现页} \\
+
+$b$ & 超参数用于计算自适应卷积核大小  & 8  \\
+$B_{in}$ & 来自边界流的模块输入特征图    & 31 \\
+
+$\beta$ & 超参数用于平衡边界损失和分割损失 & 34
+
+
+\end{longtable}
+%\caption{一个占满页宽的表格}
+}% 中文宋体5号；英文：Times New Roman 5号字 
+
+
+ \clearpage
+

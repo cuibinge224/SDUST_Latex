@@ -1,0 +1,36 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[openany,twoside,fontset=none,UTF8]{ctexbook}
+\input{setup/package}
+\graphicspath{{figures/}} % 设定图片存放的根目录
+
+%===================================== Cover and TOC =====================================
+\begin{document}
+\input{setup/format}   
+\input{setup/cover}
+\input{setup/abstract}       %封面
+\input{setup/content}        %目录
+\input{setup/inventory}      % 清单
+%\input{setup/nomenclature} % 主要符号表，不需要符号表时可将此行注释
+
+
+%======================================= Main Body =======================================
+%\mainmatter
+%\include{body/chapter_1}  %正文
+\include{body/chapter_6}  %正文
+\include{body/chapter_7}  
+%======================================= Reference =======================================
+%\addcontentsline{toc}{chapter}{参考文献}
+%\addcontentsline{toe}{chapter}{References}
+\pagestyle{empty}
+\bibliography{bib/mybib}  %参考文献
+%\input{setup/ref} 
+%=================================学术情况和致谢=========================================================
+\input{setup/personal_infor} %个人信息
+
+\include{appendix/acknowledgements}    %致谢
+%=================================论文数据集和结束页=========================================================
+\input{setup/dataset}        %数据集
+
+
+\end{document} 

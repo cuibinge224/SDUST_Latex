@@ -1,0 +1,143 @@
+% !Mode:: "TeX:UTF-8" 
+
+\begin{titlepage}
+	% 中文封面
+
+	\begin{figure*}[!ht]
+			
+			\includegraphics[width=3cm,height=3cm]{cover/xiaohui}
+	\end{figure*}
+	
+	\vspace{1em}
+	
+	\begin{center}	
+		 {\kai\fontsize{18pt}{18pt}\selectfont {工学硕士学位论文}} %楷体小2号居中 单倍行距
+		 
+\vspace{1em}
+     { \bfseries\hei\fontsize{22pt}{30pt}\selectfont\setlength{\parskip}{0.5\baselineskip} {
+      3D-FSM•DDM间接边界元数值系统\\
+      \vspace{10pt}
+      及其在矿山工程中的应用研究 }} %黑体2号加黑，居中，固定行距3  
+      
+    {\fontsize{18pt}{20pt}\selectfont\setlength{\parskip}{0.5\baselineskip}  
+   Research on the 3D-FSM•DDM IBEM NumericalSystem and Application in Mining Engineering }  	 %小2号，居中，行间距20磅
+		 
+		
+		\vspace{15em}
+		{\bfseries\fontsize{16pt}{32pt}\selectfont
+			\begin{center} \renewcommand{\arraystretch}{1.0}
+				\begin{tabular}{l}
+					作\quad 者 \quad 赵衍利 \\
+					导\quad 师 \quad 崔宾阁\quad  教授 \\
+				\end{tabular} \renewcommand{\arraystretch}{1}
+			\end{center} 
+		}
+	\end{center} %宋体3号，居中 2倍行距
+
+      \vspace{5em}
+      \begin{center} {\kai\fontsize{18pt}{22.5pt}\selectfont 山东科技大学} \end{center}
+      \begin{center} {\kai\fontsize{18pt}{22.5pt}\selectfont 二〇二三年五月} \end{center} % 楷体小2号，居中 1.25倍行距
+	%\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%---------------------------------------------------------------------------------------
+\newpage\thispagestyle{empty}
+{\fontsize{14pt}{21pt}\selectfont
+	 \begin{raggedright}\renewcommand{\arraystretch}{1}
+		\begin{tabular}{ll}
+                中图分类号 \underline{\hspace{2em} TP751 \hspace{2em}} \hspace{8em} & 学校代码 \underline{ \hspace{2em} 10424 \hspace{2em}} \\
+                UDC\underline{ \hspace{5em} 004 \hspace{3em}} \hspace{8em}&  密\hspace{2em}级 \underline{\hspace{2em}   公开 \hspace{2.8em}}  \\
+			
+		\end{tabular} \renewcommand{\arraystretch}{1}
+       \end{raggedright}   %宋体，四号 行距1.5
+
+     }
+     \vspace{8.5em}
+		\begin{center} { \bfseries\xinwei\fontsize{36pt}{36pt}\selectfont 山东科技大学 }  \end{center}% 华文新魏，小初，居中 单倍行距
+
+	\vspace{1em}
+	 \begin{center}{ \bfseries\li\fontsize{26pt}{26pt}\selectfont 工学硕士学位论文 } %隶书，一号，居中 单倍行距
+
+		\vspace{1em}
+		 { \bfseries\hei\fontsize{18pt}{26pt}\selectfont\setlength{\parskip}{0.2\baselineskip} 
+		 3D-FSM•DDM间接边界元数值系统\\
+      \vspace{5pt}
+      及其在矿山工程中的应用研究} %黑体小2号，居中  行距26
+
+		{\fontsize{16pt}{20pt}\selectfont\setlength{\parskip}{0.5\baselineskip} 
+		 Research on the 3D-FSM•DDM IBEM NumericalSystem and Application in Mining Engineering }     \end{center} % 3号 行距20
+\vspace{3em}
+{\hei\fontsize{14pt}{28pt}\selectfont
+	\begin{center} \renewcommand{\arraystretch}{1}
+		\begin{tabular}{ll}
+                作\quad 者\underline{\hspace{4em}XXX\hspace{4em}} & 入学时间 \underline{\hspace{2em} 2020 年 9月 \hspace{2em}} \\
+			导\quad 师\underline{\hspace{4em}XXX\hspace{4em}}  & 职\quad 称 \underline{\hspace{4em} 教授 \hspace{4.5em}} \\
+			%副导师\underline{\hspace{8em}}  &  职\quad 称\underline{\hspace{9em}} \\
+			申请学位\underline{\hspace{3em}X学硕士\hspace{3em}}  & 所在学院 \underline{\hspace{1em} 计算机科学与工程 \hspace{0.5em}} \\
+			学科（类别）\underline{XXXXXXXX}  & 方向（领域） \underline{\hspace{1em} 人工智能 \hspace{2.5em} } \\
+                答辩日期\underline{\hspace{3em} 2023 年 5月 \hspace{1em}}   &  提交日期 \underline{ \hspace{2em} 2023 年 6月 \hspace{1em}\hspace{1em}} \\
+			
+		\end{tabular} \renewcommand{\arraystretch}{1}
+	\end{center} 
+     } %黑体，四号，2倍行距
+%---------------------------------------------------------------------------------------
+\newpage\thispagestyle{empty}
+	\begin{center} { \bfseries\hei\fontsize{18pt}{18pt}\selectfont\setlength{\parskip}{0.5\baselineskip} 学位论文使用授权声明 }\end{center}  %黑体小2加粗居中，单倍行距，段前0.5行，段后0行
+
+     { \kai\fontsize{12pt}{20pt}\selectfont
+      本人完全了解山东科技大学有关保留、使用学位论文的规定，同意本人所撰写的学位论文的使用授权按照学校的管理规定处理。
+
+     作为申请学位的条件之一，学校有权保留学位论文并向国家有关部门或其指定机构送交论文的电子版和纸质版；有权将学位论文的全部或部分内容编入有关数据库发表，并可以以电子、网络及其他数字媒体形式公开出版；允许学校档案馆和图书馆保留学位论文的纸质版和电子版，可以使用影印、缩印或扫描等复制手段保存和汇编学位论文；为教学和科研目的，学校档案馆和图书馆可以将公开的学位论文作为资料在档案馆、图书馆等场所或在校园网上供校内师生阅读、浏览。
+
+
+	（保密的学位论文在解密后适用本授权）
+
+	\vspace{20pt}
+
+		\begin{tabular}{ll}
+                作者签名：\hspace{10em} & \hspace{2em}导师签名： \\
+			日\hspace{2em}期：\hspace{2em}年\hspace{2em}月\hspace{2em}日  &\hspace{2em} 日\hspace{2em}期：\hspace{2em}年\hspace{2em}月\hspace{2em}日 \\
+			
+		\end{tabular} 
+
+
+	}%楷体小4号，固定行距20磅
+%---------------------------------------------------------------------------------------
+\newpage\thispagestyle{empty}
+	\begin{center} { \bfseries\hei\fontsize{18pt}{18pt}\selectfont\setlength{\parskip}{0.5\baselineskip} 学位论文原创性声明 }\end{center} %黑体小2加粗居中，单倍行距，段前0.5行段后0.5行
+	\vspace{1.5em}
+
+     {\kai\fontsize{12pt}{20pt}\selectfont
+     本人呈交给山东科技大学的学位论文，除所列参考文献和世所公认的文献外，全部是本人攻读学位期间在导师指导下的研究成果。除文中已经标明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的研究成果。对本文的研究做出贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。
+
+     若有不实之处，本人愿意承担相关法律责任。
+
+	\par
+
+		\begin{tabular}{ll}
+                \hspace{15em} & \hspace{2em}学位论文作者签名： \\
+			\hspace{15em}  &\hspace{4em} 年\hspace{2em}月\hspace{2em}日 \\
+			
+		\end{tabular} 
+
+
+	}%楷体小四号，行间距20磅
+
+%---------------------------------------------------------------------------------------
+\newpage\thispagestyle{empty}
+	\begin{center} { \bfseries\hei\fontsize{18pt}{18pt}\setlength{\parskip}{0.5\baselineskip} 学位论文审查认定书 }\end{center} %黑体小2加粗居中，单倍行距，段前0.5行，段后0.5行；
+
+     {\kai\fontsize{12pt}{20pt}\selectfont
+     研究生\hspace{8em}在规定的学习年限内，按照培养方案及个人培养计划，完成了课程学习，成绩合格，修满规定学分；在我的指导下完成本学位论文，论文中的观点、数据、表述和结构为我所认同，论文撰写格式符合学校的相关规定，同意将本论文作为申请学位论文。
+
+	\vspace{20pt}
+
+		\begin{tabular}{ll}
+                \hspace{15em} & \hspace{2em}导师签名： \\\\
+			\hspace{15em}  &\hspace{2em}日期 \\
+			
+		\end{tabular} 
+
+
+	}
+	%---------------------------------------------------------------------------------
+\end{titlepage}

@@ -1,0 +1,26 @@
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {table}{\numberline {3.1}{\ignorespaces 机器学习方法和BPNet在测试集上定量比较结果 \relax }}{21}{section*.114}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Quantitative comparison results of machine learning methods and BPNet on test set \relax }}{21}{section*.115}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces 机器学习方法和BPNet在测试集上定量比较结果\relax }}{23}{section*.123}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Quantitative comparison results of machine learning methods and BPNet on test set \relax }}{23}{section*.124}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces 消融实验结果精度对比 \relax }}{24}{section*.127}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Accuracy comparison of ablation experiment results\relax }}{24}{section*.128}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces 辅助损失消融实验结果精度对比\relax }}{24}{section*.130}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Accuracy comparison of auxiliary loss ablation experiment results\relax }}{24}{section*.131}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces BPNet在Sentinel-2影像上的定量比较结果\relax }}{26}{section*.144}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Quantitative comparison results of BPNet on Sentinel-2 images\relax }}{26}{section*.145}%
+\addvspace {10.0pt}
+\contentsline {table}{\numberline {4.1}{\ignorespaces 不同方法在测试集上的定量对比结果\relax }}{35}{section*.192}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Quantitative comparison results of different methods on test set \relax }}{35}{section*.193}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces 消融实验结果精度对比\relax }}{37}{section*.196}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Accuracy comparison of ablation experiment results \relax }}{37}{section*.197}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces 不同模型的参数量和推理时间比较\relax }}{38}{section*.206}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Parameter and inference time comparison of different models. \relax }}{38}{section*.207}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces 不同注意力模块在测试集上的定量对比 \relax }}{39}{section*.209}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Quantitative comparison of different methods on test set \relax }}{39}{section*.210}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces RADNet在Sentinel-2影像上的定量比较结果\relax }}{41}{section*.227}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Quantitative comparison results of BPNet on Sentinel-2 images\relax }}{41}{section*.228}%
+\addvspace {10.0pt}
+\contentsfinish 

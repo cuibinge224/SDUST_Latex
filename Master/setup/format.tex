@@ -1,0 +1,266 @@
+% !Mode:: "TeX:UTF-8" 
+
+%========================================= Font ==========================================
+% 定义字号
+\newcommand{\chuhao}{\fontsize{42pt}{42pt}\selectfont} %初号
+\newcommand{\xiaochu}{\fontsize{42pt}{42pt}\selectfont} %小初
+\newcommand{\yihao}{\fontsize{36pt}{36pt}\selectfont} %小初
+\newcommand{\erhao}{\fontsize{22.08249pt}{22.08249pt}\selectfont}      % 二号, 1.0倍行距
+\newcommand{\xiaoer}{\fontsize{18.06749pt}{18.06749pt}\selectfont}      % 小二号, 1.0倍行距
+\newcommand{\sanhao}{\fontsize{16pt}{16pt}\selectfont}      % 三号, 1.0倍行距
+\newcommand{\xiaosan}{\fontsize{15pt}{15pt}\selectfont}     % 小三, 1.0倍行距
+\newcommand{\sihao}{\fontsize{14pt}{14pt}\selectfont}       % 四号, 1.0倍行距
+\newcommand{\xiaosi}{\fontsize{12pt}{12pt}\selectfont}      % 小四, 1.0倍行距
+\newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont}   % 五号, 1.0倍行距
+\newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont}        % 小五, 1.0倍行距
+
+\newcommand{\duanjianju}{\setlength{\parindent}{0pt}\setlength{\parskip}{0.5\baselineskip}}        % 段间距
+%\newcommand{\duanhou}{\setlength{\parskip}{0.5\baselineskip}}        % 断后
+
+
+% 默认字体
+\makeatletter
+\renewcommand\normalsize{
+	\@setfontsize\normalsize{12pt}{14pt} % 小四 行间距15pt 数学公式前后的距离为 8pt  注意：模板行间距20，经测试此处设置为15与word版相近
+	\setlength\abovedisplayskip{8pt}
+	\setlength\abovedisplayshortskip{8pt}
+	\setlength\belowdisplayskip{\abovedisplayskip}
+	\setlength\belowdisplayshortskip{\abovedisplayshortskip}
+	\let\@listi\@listI
+}
+
+% 脚注字体为 5 号
+\renewcommand{\footnotesize}{\wuhao}
+
+% 设置行距和段落间垂直距离
+\setlength{\parindent}{2em}  %段落缩进2个字体
+\setlength{\parskip}{3pt plus1pt minus1pt} %设置段落之间的间距为 3pt，其中 plus1pt 表示如果需要可以放宽到 1pt，minus1pt 表示如果需要可以缩小到 -1pt。
+%\def\defaultfont{\renewcommand{\baselinestretch}{1.5}\normalsize\selectfont}
+\def\defaultfont{\normalsize}
+% 设置字间距，使每行37个字，若要减少每行字数（一般以34个），将0.56pt的值增加
+\renewcommand{\CJKglue}{\hskip 0.56pt plus 0.08\baselineskip}
+
+
+% 公式跨页设置，公式之前可以换页，公式出现在页面顶部
+\predisplaypenalty=0
+\allowdisplaybreaks[4]
+
+% 允许断页时给上一页底部留有一定空白，避免拉大标题和行距
+\raggedbottom
+
+%========================================= TOC ===========================================
+% 中文目录格式定义
+\renewcommand\contentsname{\hfill 目~~~~录 \hfill}
+%\titlecontents{chapter}[3.8em]{\bfseries\small }{\thecontentslabel~~}{}{\titlerule*[4pt]{.}\contentspage}
+\titlecontents{chapter}[0em]{\bfseries\hei\xiaosi\vspace{0.5\baselineskip}\noindent}{\thecontentslabel~~}{}{\titlerule*[4pt]{.}\contentspage\vspace{0.5\baselineskip}}
+\dottedcontents{section}[38pt]{\xiaosi}{20pt}{0.3pc}
+
+\dottedcontents{subsection}[70pt]{\xiaosi}{32pt}{0.3pc}
+
+
+% 英文目录格式定义： 细点\@dottedtocline  粗点\@dottedtoclinebold
+
+%\titlecontents{chapter*}[0pt]{\bfseries\xiaosi}{\thecontentslabel\quad}{}{\titlerule*[0.5pc]{.}\contentspage}
+%\titlecontents{section}[2em]{\normalfont\normalsize}{\thecontentslabel\quad}{}{\titlerule*[0.5pc]{.}\contentspage}
+%\titlecontents{subsection}[4em]{\normalfont\normalsize}{\thecontentslabel\quad}{}{\titlerule*[0.5pc]{.}\contentspage}
+%\renewcommand*\l@chapter{\bfseries\@dottedtocline{0}{0em}{5em}}
+\renewcommand*\l@chapter{\bfseries\@dottedtocline{0}{0em}{5em}}
+\renewcommand*\l@section{\normalfont\@dottedtocline{1}{1em}{1.8em}}
+\renewcommand*\l@subsection{\normalfont\@dottedtocline{2}{2.8em}{2.5em}}
+\def\@dotsep{0.75}           % 定义英文目录的点间距
+\setlength\leftmargini {50pt}
+\setlength\leftmarginii {50pt}
+\def\engcontentsname{\hfill CONTENTS \hfill}
+\newcommand\tableofengcontents{
+	\@restonecolfalse
+	\chapter*{\engcontentsname  %chapter*上移一行，避免在toc中出现。
+		\@mkboth{%
+			\engcontentsname}{ \engcontentsname }}
+	\@starttoc{toe}%
+	\if@restonecol\twocolumn\fi
+}
+
+%======================================= Chapter =========================================
+% 章节格式定义
+\renewcommand\chaptername{\thechapter}
+\ctexset{chapter={name={,},number={\arabic{chapter}}}}
+\setcounter{secnumdepth}{4} \setcounter{tocdepth}{2}
+\titleformat{\chapter}{\bfseries\hei\fontsize{18.06749pt}{14pt}\selectfont\vspace{0.5em}}{\chaptertitlename}{0.8em}{}  %段前0.5行
+\titlespacing{\chapter}{0pt}{-5.3mm}{4.2mm}
+\titleformat{\section}{\fontsize{15pt}{10pt}\selectfont\hei\vspace{-0.5em}}{\thesection}{0.5em}{\setlength{\parskip}{20pt}}
+\titlespacing{\section}{0pt}{20pt}{20pt}
+\titleformat{\subsection}{\fontsize{14pt}{12pt}\selectfont\hei}{\thesubsection}{0.5em}{}
+\titlespacing{\subsection}{0em}{3mm}{3mm}
+
+% 重新定义BiChapter命令，可实现标题手动换行，但不影响目录
+\def\BiChapter{\relax\@ifnextchar [{\@BiChapter}{\@@BiChapter}}
+\def\@BiChapter[#1]#2#3{\chapter[#1]{#2}
+    \addcontentsline{toe}{chapter}{\xiaosi \thechapter #3}}
+\def\@@BiChapter#1#2{\chapter{#1} {\bfseries\xiaoer\hei\noindent{\thechapter \hspace{0.5em} #2\vspace{0.5em}}}
+    \addcontentsline{toe}{chapter}{\xiaosi \thechapter\hspace{0.5em}{\boldmath #2}}}
+
+% 定义双标题
+
+
+\newcommand{\addsectiontocontents}[1]{%
+  \if@filesw % 检查是否在写文件
+    \ifx\@toc@write\@undefined % 检查是否已经添加
+      \def\@toc@write{1}%
+      \addtocontents{toc}{\protect\contentsline{section}{\protect\numberline{\thesection}#1}{}}%
+    \fi
+  \fi
+}
+
+
+
+\newcommand{\BiSection}[2]{
+	\section[#1]{#1$(${#2}$)$}
+	\vspace{-0.5em}
+     \addcontentsline{toe}{section}{\protect\numberline{\csname thesection\endcsname}#2}
+}
+
+\newcommand{\BiSubsection}[1]{
+	\subsection{#1}
+	\vspace{-0.25em}
+	%\addcontentsline{toe}{subsection}{\protect\numberline{\csname thesubsection\endcsname}#2}
+}
+\newcommand{\BiSubsubsection}[2]{
+    \subsubsection{#1}
+   % \addcontentsline{toe}{subsubsection}{\protect\numberline{\csname thesubsubsection\endcsname}#2} %不显示二级标题
+}
+
+% 该附录命令适用于有章节的完整附录和用于发表文章和简历的附录
+\newcommand{\BiAppChapter}[2]{
+	\phantomsection 
+	\chapter{#1}
+	\addcontentsline{toe}{chapter}{\xiaosi Appendix \thechapter~~#2}
+}
+\newcommand{\BiAppendixChapter}[2]{
+	\phantomsection
+	\markboth{#1}{#1}
+	\addcontentsline{toc}{chapter}{\centering\xiaosi #1}
+	\addcontentsline{toe}{chapter}{\centering\xiaosi #2}  \chapter*{#1}
+}
+
+% 参考文献格式
+
+%\renewcommand{\bibname}{\centerline{参考文献}} 
+\renewcommand{\bibname}{\hei\bfseries\xiaoer\vspace{-0.5em} \centerline{参考文献}\vspace{-0.5em}} 
+\bibliographystyle{bib/gbt-7714-2015-numerical}
+\addtolength{\bibsep}{-0.8em}
+\renewcommand{\bibfont}{\fontsize{10.5pt}{14.8pt}\selectfont}
+%\renewcommand{\bibname}{References}% 英文论文参考文献章标题是 References
+
+%======================================== Header =========================================
+
+
+% 定义页眉和页脚
+%\rule[6pt]{\textwidth}{0.5pt} \\[-17.5pt]
+%\rule{\textwidth}{0.5pt}}
+\newcommand{\makeheadrule}{
+\rule[6pt]{\textwidth}{0.5pt}}
+\renewcommand{\headrule}{
+    {\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+     \makeheadrule}}
+\pagestyle{plain}
+% 不要注销这一行，否则页眉会变成：“第1章1  绪论”样式
+\renewcommand{\chaptermark}[1]{\markboth{\chaptertitlename~~\ #1}{}}
+\fancyhf{}
+\fancyhead[R]{\wuhao \leftmark}
+\fancyhead[L]{\wuhao 山东科技大学硕士学位论文}
+\fancyfoot[C]{\xiaowu \thepage}
+%\setlength{\headsep}{1.5cm}
+\setlength{\topmargin}{-1cm} % 页眉距离顶部边界的距离
+%\setlength{\footskip}{1.25cm} % 页脚距离底部边界的距离
+%======================================= Theorem =========================================
+% 定理正文和标题字体
+\theoremstyle{plain}
+\theoremheaderfont{\hei\rmfamily}
+\theorembodyfont{\rmfamily}
+\theoremseparator{：}
+
+% 定理环境和上下文之间的距离
+\setlength{\theorempreskipamount}{8pt}
+\setlength{\theorempostskipamount}{8pt}
+
+% 定义新的定理环境
+\theoremsymbol{$\Diamond$} \newtheorem{definition}{\hskip 2em \hei 定义}[chapter]
+\theoremsymbol{$\blacklozenge$} \newtheorem{example}{\hskip 2em \hei 例}[chapter]
+\theoremsymbol{$\square$} \newtheorem{theorem}{\hskip 2em \hei 定理}[chapter]
+\theoremsymbol{$\blacksquare$} \newtheorem*{proof}{\hskip 2em \hei 证明}
+
+%========================================= FTE ===========================================
+% 图表公式的编号为1-1格式，子图编号为 (a) 的格式
+%\renewcommand{\figurename}{Fig.}% 英文论文图标题以 Figure 开头
+%\renewcommand{\tablename}{Table}% 英文论文表标题以 Table 开头
+\captionsetup[figure][bi-first]{name=图}
+\captionsetup[figure][bi-second]{name=Fig.}
+\captionsetup[table][bi-first]{name=表}
+\captionsetup[table][bi-second]{name=Table}
+
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\renewcommand{\p@subfigure}{\thefigure~}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+% 把 tabularx 宏包的列格式左对齐改成居中对齐
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+%\DeclareCaptionFont{fivept}{\fontsize{10.5pt}{10.5pt}\selectfont}
+% 定制浮动图形和表格标题样式
+\captionsetup[table]{labelsep=space} % 表去掉冒号
+\captionsetup[figure]{labelsep=space} %图去掉冒号
+\captionsetup{skip=20pt}
+\captionsetup[table]{textfont={footnotesize}}  %5号字体
+\captionsetup[figure]{textfont={footnotesize}}  %5号字体
+
+\renewcommand{\subcapsize}{\wuhao}
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% 关于公式的几个定义
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\Exp}{\mathrm{E}}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\seq}[2]{#1_1,#1_2,\cdots,#1_#2}
+\newcommand{\iprod}[2]{\langle #1,#2 \rangle}
+
+% 调整罗列环境的布局
+\setitemize{leftmargin=3em,itemsep=0em,partopsep=0em,parsep=0em,topsep=-0em}
+\setenumerate{leftmargin=3.2em,itemsep=0em,partopsep=0em,parsep=0em,topsep=0em}
+
+% 自定义项目列表标签及格式 \begin{publist} 列表项 \end{publist}
+\newcounter{pubctr} %自定义新计数器
+\newenvironment{publist}{\wuhao\selectfont
+	\begin{list}{[\arabic{pubctr}]}{
+     \usecounter{pubctr}
+     \setlength{\leftmargin}{2em}		% 左边界
+     \setlength{\labelsep}{0.8em}		% 标号和列表项之间的距离,默认0.5em
+     \setlength{\parsep}{0ex}			% 段落间距
+     \setlength{\itemsep}{0ex}			% 标签间距
+    }}
+{\end{list}}%
+
+% 更改算法标题
+\renewcommand{\algorithmcfname}{算法}
+\renewcommand{\algocf@captiontext}[2]{\wuhao#1\algocf@typo ~ \AlCapFnt{}#2}
+\renewcommand\thealgocf{\csname the\algocf@within\endcsname-\@arabic\c@algocf}
+\SetAlCapSty{textrm}
+\SetAlCapSkip{1ex}
+\makeatother
+
+% 更改代码标题
+\renewcommand{\lstlistingname}{代码}
+\renewcommand{\thelstlisting}{\arabic{chapter}-\arabic{lstlisting}}
+
+% 上角标形式的参考文献引用格式
+\newcommand{\citeup}[1]{\textsuperscript{\cite{#1}}}
+%======================================== Other ==========================================
+% 避免宏包 hyperref 和 arydshln 不兼容带来的目录链接失效的问题。
+\def\temp{\relax}
+\let\temp\addcontentsline
+\gdef\addcontentsline{\phantomsection\temp}
+\gdef\hitempty{}
